@@ -1,0 +1,37 @@
+<%= form_for([owner, token]) do |f| %>
+  <% if token.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(token.errors.count, "error") %> prohibited this token from being saved:</h2>
+
+      <ul>
+      <% token.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :sessionKey %>
+    <%= f.text_field :sessionKey %>
+  </div>
+
+  <div class="field">
+    <%= f.label :accessToken %>
+    <%= f.text_field :accessToken %>
+  </div>
+
+  <div class="field">
+    <%= f.label :refreshToken %>
+    <%= f.text_field :refreshToken %>
+  </div>
+
+  <div class="field">
+    <%= f.label :scope %>
+    <%= f.text_field :scope %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

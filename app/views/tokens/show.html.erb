@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sessionkey:</strong>
+  <%= @token.sessionKey %>
+</p>
+
+<p>
+  <strong>Accesstoken:</strong>
+  <%= @token.accessToken %>
+</p>
+
+<p>
+  <strong>Refreshtoken:</strong>
+  <%= @token.refreshToken %>
+</p>
+
+<p>
+  <strong>Scope:</strong>
+  <%= @token.scope %>
+</p>
+
+<%= link_to 'Edit', edit_owner_token_path(owner_id: @owner.id, id: @token.id) %> |
+<%= link_to 'Authorization properties', owner_token_auth_properties_path(owner_id: @owner.id, token_id: @token.id) %> |
+<%= link_to 'Back', owner_tokens_path(owner_id: @owner.id) %>

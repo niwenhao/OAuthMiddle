@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tokens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sessionkey</th>
+      <th>Accesstoken</th>
+      <th>Refreshtoken</th>
+      <th>Scope</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tokens.each do |token| %>
+      <tr>
+        <td><%= token.sessionKey %></td>
+        <td><%= token.accessToken %></td>
+        <td><%= token.refreshToken %></td>
+        <td><%= token.scope %></td>
+        <td><%= link_to 'Show', owner_token_path(owner_id: @owner.id, id: token.id) %></td>
+        <td><%= link_to 'Edit', edit_owner_token_path(owner_id: @owner.id, id: token.id) %></td>
+        <td><%= link_to 'Destroy', owner_token_path(owner_id: @owner.id, id: token.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Authorizating Properties', owner_token_auth_properties_path(owner_id: @owner.id, token_id: token.id) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Token', new_owner_token_path %>
+<%= link_to 'Back', owner_path(@owner) %>

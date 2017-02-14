@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sessionKey: MyString
+  accessToken: MyString
+  refreshToken: MyString
+  scope: MyString
+
+two:
+  sessionKey: MyString
+  accessToken: MyString
+  refreshToken: MyString
+  scope: MyString

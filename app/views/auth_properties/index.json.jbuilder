@@ -1,0 +1,1 @@
+json.array! @auth_properties, partial: 'auth_properties/auth_property', as: :auth_property

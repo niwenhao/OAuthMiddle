@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Auth Properties</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Txtvalue</th>
+      <th>Numvalue</th>
+      <th>Token</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @auth_properties.each do |auth_property| %>
+      <tr>
+        <td><%= auth_property.key %></td>
+        <td><%= auth_property.txtValue %></td>
+        <td><%= auth_property.numValue %></td>
+        <td><%= link_to 'Show', owner_token_auth_property_path(owner_id: @owner.id, token_id: @token.id, id: auth_property.id) %></td>
+        <td><%= link_to 'Edit', edit_owner_token_auth_property_path(owner_id: @owner.id, token_id: @token.id, id: auth_property.id) %></td>
+        <td><%= link_to 'Destroy', owner_token_auth_property_path(owner_id: @owner.id, token_id: @token.id, id: auth_property.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Auth Property', new_owner_token_auth_property_path %>
+<%= link_to 'Back to Tokens', owner_tokens_path(owner_id: @owner.id) %>

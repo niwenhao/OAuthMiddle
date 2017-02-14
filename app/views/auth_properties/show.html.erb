@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Key:</strong>
+  <%= @auth_property.key %>
+</p>
+
+<p>
+  <strong>Txtvalue:</strong>
+  <%= @auth_property.txtValue %>
+</p>
+
+<p>
+  <strong>Numvalue:</strong>
+  <%= @auth_property.numValue %>
+</p>
+
+<%= link_to 'Edit', edit_owner_token_auth_property_path(owner_id: @owner.id, token_id: @token.id, id: @auth_property.id) %> |
+<%= link_to 'Back', owner_token_auth_properties_path(owner_id: @owner.id, token_id: @token.id) %>

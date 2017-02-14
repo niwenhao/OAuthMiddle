@@ -1,0 +1,1 @@
+json.partial! "auth_properties/auth_property", auth_property: @auth_property
