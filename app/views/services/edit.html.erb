@@ -1,0 +1,6 @@
+<h1>Editing Service</h1>
+
+<%= render 'form', owner: @owner, service: @service %>
+
+<%= link_to 'Show', [@owner, @service] %> |
+<%= link_to 'Back', owner_services_path(@owner) %>

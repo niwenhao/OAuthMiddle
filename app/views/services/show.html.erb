@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @service.name %>
+</p>
+
+<p>
+  <strong>Keyword:</strong>
+  <%= @service.keyword %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @service.url %>
+</p>
+
+<p>
+  <strong>Callsummary:</strong>
+  <%= @service.callsummary %>
+</p>
+
+<p>
+  <strong>Summarystart:</strong>
+  <%= @service.summaryStart %>
+</p>
+
+<%= link_to 'Edit', edit_owner_service_path([@owner, @service]) %> |
+<%= link_to 'Back', owner_services_path(@owner) %>

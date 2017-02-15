@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   resources :owners do
-      resources :tokens do
-          resources :auth_properties
-      end
+    resources :services
+    resources :tokens do
+      resources :auth_properties
+    end
   end
   get '/apigw/login/display', to: 'api_gw_login#display'
   post '/apigw/login/login', to: 'api_gw_login#login'

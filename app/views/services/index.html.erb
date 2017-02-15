@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Services</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Keyword</th>
+      <th>Url</th>
+      <th>Callsummary</th>
+      <th>Summarystart</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @services.each do |service| %>
+      <tr>
+        <td><%= service.name %></td>
+        <td><%= service.keyword %></td>
+        <td><%= service.url %></td>
+        <td><%= service.callsummary %></td>
+        <td><%= service.summaryStart %></td>
+        <td><%= link_to 'Show', [@owner, service] %></td>
+        <td><%= link_to 'Edit', edit_owner_service_path(@owner, service) %></td>
+        <td><%= link_to 'Destroy', [@owner, service], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Service', new_owner_service_path(@owner) %>&nbsp;|&nbsp;
+<%= link_to 'Back to owner list', owners_path %>
