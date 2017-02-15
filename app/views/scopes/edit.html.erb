@@ -1,0 +1,6 @@
+<h1>Editing Scope</h1>
+
+<%= render 'form', owner: @owner, service: @service, scope: @scope %>
+
+<%= link_to 'Show', [@owner, @service, @scope] %> |
+<%= link_to 'Back', owner_service_scopes_path(@owner, @service) %>

@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  resources :scopes
   resources :owners do
-    resources :services
+    resources :services do
+      resources :scopes
+    end
     resources :tokens do
       resources :auth_properties
     end

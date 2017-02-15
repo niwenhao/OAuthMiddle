@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Scopes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scopes.each do |scope| %>
+      <tr>
+        <td><%= scope.name %></td>
+        <td><%= link_to 'Show',[@owner, @service,  scope] %></td>
+        <td><%= link_to 'Edit', edit_owner_service_scope_path(@owner, @service, scope) %></td>
+        <td><%= link_to 'Destroy', [@owner, @service, scope], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scope', new_owner_service_scope_path(@owner, @service) %>
+&nbsp;|&nbsp;
+<%= link_to 'Back to service list', owner_services_path(@owner) %>
+

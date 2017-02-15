@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @scope.name %>
+</p>
+
+<%= link_to 'Edit', edit_owner_service_scope_path(@owner, @service, @scope) %> |
+<%= link_to 'Back', owner_service_scopes_path(@owner, @service) %>
