@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :scopes
   resources :owners do
+    resources :owner_properties
     resources :services do
       resources :scopes
     end

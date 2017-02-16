@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Key:</strong>
+  <%= @owner_property.key %>
+</p>
+
+<p>
+  <strong>Str val:</strong>
+  <%= @owner_property.str_val %>
+</p>
+
+<p>
+  <strong>Num val:</strong>
+  <%= @owner_property.num_val %>
+</p>
+
+<%= link_to 'Edit', edit_owner_owner_property_path(@owner, @owner_property) %> |
+<%= link_to 'Back', owner_owner_properties_path(@owner) %>

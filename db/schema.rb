@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170215151609) do
+ActiveRecord::Schema.define(version: 20170216092155) do
 
   create_table "auth_properties", force: :cascade do |t|
     t.string   "key"
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(version: 20170215151609) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["token_id"], name: "index_auth_properties_on_token_id"
+  end
+
+  create_table "owner_properties", force: :cascade do |t|
+    t.string   "key"
+    t.string   "str_val"
+    t.float    "num_val"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "owner_id"
+    t.index ["owner_id"], name: "index_owner_properties_on_owner_id"
   end
 
   create_table "owners", force: :cascade do |t|

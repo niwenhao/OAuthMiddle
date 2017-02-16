@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  key: MyString
+  str_val: MyString
+  num_val: 1.5
+
+two:
+  key: MyString
+  str_val: MyString
+  num_val: 1.5

@@ -1,0 +1,1 @@
+json.array! @owner_properties, partial: 'owner_properties/owner_property', as: :owner_property

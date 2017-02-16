@@ -21,6 +21,7 @@
         <td><%= link_to 'Destroy', owner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <td><%= link_to 'Tokens', owner_tokens_path(owner) %></td>
         <td><%= link_to 'Services', owner_services_path(owner) %></td>
+        <td><%= link_to 'Properties', owner_owner_properties_path(owner) %></td>
       </tr>
     <% end %>
   </tbody>

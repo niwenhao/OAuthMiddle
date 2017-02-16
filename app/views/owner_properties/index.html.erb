@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Owner Properties</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Str val</th>
+      <th>Num val</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @owner_properties.each do |owner_property| %>
+      <tr>
+        <td><%= owner_property.key %></td>
+        <td><%= owner_property.str_val %></td>
+        <td><%= owner_property.num_val %></td>
+        <td><%= link_to 'Show', [@owner, owner_property] %></td>
+        <td><%= link_to 'Edit', edit_owner_owner_property_path(@owner, owner_property) %></td>
+        <td><%= link_to 'Destroy', [@owner, owner_property], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Owner Property', new_owner_owner_property_path(@owner) %>&nbsp;|&nbsp;
+<%= link_to 'Back to owner list', owners_path %>

@@ -1,0 +1,6 @@
+<h1>Editing Owner Property</h1>
+
+<%= render 'form', owner: @owner, owner_property: @owner_property %>
+
+<%= link_to 'Show', [@owner, @owner_property] %> |
+<%= link_to 'Back', owner_owner_properties_path(@owner) %>
