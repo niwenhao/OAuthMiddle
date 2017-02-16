@@ -1,0 +1,2 @@
+class ServiceProperty < ApplicationRecord
+end

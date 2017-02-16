@@ -75,6 +75,6 @@ class OwnerPropertiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def owner_property_params
-      params.require(:owner_property).permit(:key, :str_val, :num_val)
+      params.require(:owner_property).permit(:key, :key2, :str_val, :num_val, :comment)
     end
 end

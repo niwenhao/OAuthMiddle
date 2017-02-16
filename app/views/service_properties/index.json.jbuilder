@@ -1,0 +1,1 @@
+json.array! @service_properties, partial: 'service_properties/service_property', as: :service_property

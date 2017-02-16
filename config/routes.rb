@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+  resources :auth_users do
+    get 'prelogin', on: :collection
+    post 'postlogin', on: :collection
+  end
   resources :owners do
     resources :owner_properties
     resources :services do
+      resources :service_properties
       resources :scopes
     end
     resources :tokens do

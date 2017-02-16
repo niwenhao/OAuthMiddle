@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Service Properties</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Key2</th>
+      <th>Strval</th>
+      <th>Numval</th>
+      <th>Comment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @service_properties.each do |service_property| %>
+      <tr>
+        <td><%= service_property.key %></td>
+        <td><%= service_property.key2 %></td>
+        <td><%= service_property.strVal %></td>
+        <td><%= service_property.numVal %></td>
+        <td><%= service_property.comment %></td>
+        <td><%= link_to 'Show', service_property %></td>
+        <td><%= link_to 'Edit', edit_service_property_path(service_property) %></td>
+        <td><%= link_to 'Destroy', service_property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Service Property', new_service_property_path %>

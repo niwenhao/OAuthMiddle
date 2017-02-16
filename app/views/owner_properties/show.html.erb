@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <strong>Key2:</strong>
+  <%= @owner_property.key2 %>
+</p>
+
+<p>
   <strong>Str val:</strong>
   <%= @owner_property.str_val %>
 </p>
@@ -13,6 +18,11 @@
 <p>
   <strong>Num val:</strong>
   <%= @owner_property.num_val %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @owner_property.comment %>
 </p>
 
 <%= link_to 'Edit', edit_owner_owner_property_path(@owner, @owner_property) %> |

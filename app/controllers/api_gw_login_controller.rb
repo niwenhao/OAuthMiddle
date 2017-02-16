@@ -1,8 +1,7 @@
 class ApiGwLoginController < ApplicationController
-  before_action :load_scope
+  around_action :load_scope
 
   def display
-    response.header["APIGW-STATUS"] = 0
   end
 
   def login
@@ -28,5 +27,15 @@ class ApiGwLoginController < ApplicationController
 
   def load_scope
     @scope = request.headers['APIGW-SCOPE']
+    @owner = Owner.findByScop @scope
+
+    if @owner then
+      response.header["APIGW-STATUS"] = 0
+      response.header["APIGW-MESSAGE"] = ""
+      yield
+    else
+      response.header["APIGW-STATUS"] = "801"
+      response.header["APIGW-MESSAGE"] = "Failed to find owner for the scope (#{@scope})"
+    end
   end
 end

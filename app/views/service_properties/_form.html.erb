@@ -1,10 +1,10 @@
-<%= form_for([owner, owner_property]) do |f| %>
-  <% if owner_property.errors.any? %>
+<%= form_for(service_property) do |f| %>
+  <% if service_property.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(owner_property.errors.count, "error") %> prohibited this owner_property from being saved:</h2>
+      <h2><%= pluralize(service_property.errors.count, "error") %> prohibited this service_property from being saved:</h2>
 
       <ul>
-      <% owner_property.errors.full_messages.each do |message| %>
+      <% service_property.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -22,13 +22,13 @@
   </div>
 
   <div class="field">
-    <%= f.label :str_val %>
-    <%= f.text_field :str_val %>
+    <%= f.label :strVal %>
+    <%= f.text_area :strVal %>
   </div>
 
   <div class="field">
-    <%= f.label :num_val %>
-    <%= f.text_field :num_val %>
+    <%= f.label :numVal %>
+    <%= f.text_field :numVal %>
   </div>
 
   <div class="field">

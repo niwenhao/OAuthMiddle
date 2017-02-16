@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Key:</strong>
+  <%= @service_property.key %>
+</p>
+
+<p>
+  <strong>Key2:</strong>
+  <%= @service_property.key2 %>
+</p>
+
+<p>
+  <strong>Strval:</strong>
+  <%= @service_property.strVal %>
+</p>
+
+<p>
+  <strong>Numval:</strong>
+  <%= @service_property.numVal %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @service_property.comment %>
+</p>
+
+<%= link_to 'Edit', edit_service_property_path(@service_property) %> |
+<%= link_to 'Back', service_properties_path %>

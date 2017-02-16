@@ -1,0 +1,12 @@
+<h1>Editing Auth User</h1>
+
+<%= form_tag action: 'postlogin', method: 'post' do%>
+  <%= label_tag :userid, 'ログインID：' %>
+  <%= text_field_tag :userid %>
+  <br/>
+  <%= label_tag :passwd, 'パスワード：' %>
+  <%= password_field_tag :passwd %>
+  <br/>
+
+  <%= submit_tag "ログイン" %>
+<% end %>

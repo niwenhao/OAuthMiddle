@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Userid:</strong>
+  <%= @auth_user.userid %>
+</p>
+
+<p>
+  <strong>Passwd:</strong>
+  <%= @auth_user.passwd %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @auth_user.name %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @auth_user.mail %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @auth_user.address %>
+</p>
+
+<%= link_to 'Edit', edit_auth_user_path(@auth_user) %> |
+<%= link_to 'Back', auth_users_path %>

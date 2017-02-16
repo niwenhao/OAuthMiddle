@@ -1,0 +1,1 @@
+json.partial! "service_properties/service_property", service_property: @service_property
